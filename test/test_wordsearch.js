@@ -19,6 +19,12 @@ describe("#wordSearch()", function() {
 
     assert.isFalse(result);
   });
+  it("should return false matrix is empty", function() {
+    const result = wordSearch([
+    ], 'FRANK')
+
+    assert.isFalse(result);
+  });
 
   it("should return true if the word is present", function() {
     const result = wordSearch([
@@ -32,6 +38,22 @@ describe("#wordSearch()", function() {
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
     ], 'SEINFELD')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['E', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['M', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['I', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['L', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['Y', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'EMILY');
 
     assert.isTrue(result);
   });
